@@ -1,5 +1,7 @@
 package zk.tools.zassert;
 
+import zk.tools.zassert.exception.AssertException;
+
 /**
  * @Author: Z.K
  * @FileName: Assert
@@ -7,11 +9,19 @@ package zk.tools.zassert;
  * @Version 1.0
  * @Description:
  */
-public class Assert {
+public interface Assert {
 
-    public static void isNull(Object obj,String msg){
+    AssertException newException();
+    AssertException newException(String message);
+
+    default void isNull(Object obj){
         if(obj==null){
-            throw new RuntimeException(msg);
+            throw newException();
+        }
+    }
+    default void isNull(Object obj,String message){
+        if(obj==null){
+            throw newException(message);
         }
     }
 
