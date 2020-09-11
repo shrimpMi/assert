@@ -132,7 +132,7 @@ public interface Assert {
         isNull(d1);
         isNull(d2);
         if(d1 instanceof Number && d2 instanceof Number){
-            isTrue((double)d1 < (double)d2);
+            isTrue(((Number) d1).doubleValue() < ((Number) d2).doubleValue());
         }else{
             isTrue(new BigDecimal(d1.toString()).compareTo(new BigDecimal(d2.toString())) < 0);
         }
@@ -141,7 +141,7 @@ public interface Assert {
         isNull(d1);
         isNull(d2);
         if(d1 instanceof Number && d2 instanceof Number){
-            isTrue((double)d1 < (double)d2,message);
+            isTrue(((Number) d1).doubleValue() < ((Number) d2).doubleValue(),message);
         }else{
             isTrue(new BigDecimal(d1.toString()).compareTo(new BigDecimal(d2.toString())) < 0,message);
         }
@@ -150,7 +150,7 @@ public interface Assert {
         isNull(d1);
         isNull(d2);
         if(d1 instanceof Number && d2 instanceof Number){
-            isTrue((double)d1 <= (double)d2);
+            isTrue(((Number) d1).doubleValue() <= ((Number) d2).doubleValue());
         }else{
             isTrue(new BigDecimal(d1.toString()).compareTo(new BigDecimal(d2.toString())) <= 0);
         }
@@ -159,7 +159,7 @@ public interface Assert {
         isNull(d1);
         isNull(d2);
         if(d1 instanceof Number && d2 instanceof Number){
-            isTrue((double)d1 <= (double)d2,message);
+            isTrue(((Number) d1).doubleValue() <= ((Number) d2).doubleValue(),message);
         }else{
             isTrue(new BigDecimal(d1.toString()).compareTo(new BigDecimal(d2.toString())) <= 0,message);
         }
@@ -168,7 +168,7 @@ public interface Assert {
         isNull(d1);
         isNull(d2);
         if(d1 instanceof Number && d2 instanceof Number){
-            isTrue((double)d1 > (double)d2);
+            isTrue(((Number) d1).doubleValue() > ((Number) d2).doubleValue());
         }else{
             isTrue(new BigDecimal(d1.toString()).compareTo(new BigDecimal(d2.toString())) > 0);
         }
@@ -177,7 +177,7 @@ public interface Assert {
         isNull(d1);
         isNull(d2);
         if(d1 instanceof Number && d2 instanceof Number){
-            isTrue((double)d1 > (double)d2,message);
+            isTrue(((Number) d1).doubleValue() > ((Number) d2).doubleValue(),message);
         }else{
             isTrue(new BigDecimal(d1.toString()).compareTo(new BigDecimal(d2.toString())) > 0,message);
         }
@@ -186,7 +186,7 @@ public interface Assert {
         isNull(d1);
         isNull(d2);
         if(d1 instanceof Number && d2 instanceof Number){
-            isTrue((double)d1 >= (double)d2);
+            isTrue(((Number) d1).doubleValue() >= ((Number) d2).doubleValue());
         }else{
             isTrue(new BigDecimal(d1.toString()).compareTo(new BigDecimal(d2.toString())) >= 0);
         }
@@ -195,7 +195,7 @@ public interface Assert {
         isNull(d1);
         isNull(d2);
         if(d1 instanceof Number && d2 instanceof Number){
-            isTrue((double)d1 >= (double)d2,message);
+            isTrue(((Number) d1).doubleValue() >= ((Number) d2).doubleValue(),message);
         }else{
             isTrue(new BigDecimal(d1.toString()).compareTo(new BigDecimal(d2.toString())) >= 0,message);
         }
