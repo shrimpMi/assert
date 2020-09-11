@@ -29,6 +29,12 @@ public class AssertException extends RuntimeException {
         this.message = message==null || message.length()==0 ? model.getMessage() : message;
     }
 
+    public AssertException(int code,String message, Throwable cause) {
+        super(message, cause);
+        this.code = code;
+        this.message = message;
+    }
+
     public int getCode() {
         return code;
     }

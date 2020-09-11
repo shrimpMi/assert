@@ -11,6 +11,6 @@ import zk.tools.zassert.exception.AssertException;
  */
 public interface AssertHandler {
 
-    Object handleException(int code,String message,AssertException e);
+    Object handleException(AssertException e);
 
 }

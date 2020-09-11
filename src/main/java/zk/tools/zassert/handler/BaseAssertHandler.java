@@ -33,7 +33,7 @@ public class BaseAssertHandler {
         }
         String msg = msgBuffer.toString();
         msg = msg.substring(0, msg.length() - 1);
-        return handler.handleException(1,msg,null);
+        return handler.handleException(new AssertException(102,msg,e));
     }
 
     /**
@@ -41,11 +41,11 @@ public class BaseAssertHandler {
      */
     @ExceptionHandler(AssertException.class)
     public Object handleAssertException(AssertException e){
-        return handler.handleException(e.getCode(),e.getMessage(),e);
+        return handler.handleException(e);
     }
 
     @ExceptionHandler(Exception.class)
     public Object handleException(Exception e){
-        return handler.handleException(500,e.getMessage(),null);
+        return handler.handleException(new AssertException(500,e.getMessage(),e));
     }
 }
