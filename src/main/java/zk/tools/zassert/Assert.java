@@ -7,11 +7,10 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * @Author: Z.K
- * @FileName: Assert
- * @DateTime: 2020/9/10 0010
- * @Version 1.0
- * @Description:
+ * FileName: Assert
+ * DateTime: 2020/9/10 0010
+ * Version 1.0
+ * Description:
  */
 public interface Assert {
 

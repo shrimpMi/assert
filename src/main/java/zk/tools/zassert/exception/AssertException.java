@@ -3,11 +3,11 @@ package zk.tools.zassert.exception;
 import zk.tools.zassert.enums.ErrorModel;
 
 /**
- * @Author: Z.K
- * @FileName: BaseException
- * @DateTime: 2020/9/10 0010
- * @Version 1.0
- * @Description:
+ Author: Z.K
+ FileName: BaseException
+ DateTime: 2020/9/10 0010
+ Version 1.0
+ Description:
  */
 public class AssertException extends RuntimeException {
 

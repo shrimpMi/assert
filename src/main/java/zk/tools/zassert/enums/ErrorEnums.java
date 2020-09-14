@@ -3,11 +3,11 @@ package zk.tools.zassert.enums;
 import zk.tools.zassert.ExceptionAssert;
 
 /**
- * @Author: Z.K
- * @FileName: ErrorEnums
- * @DateTime: 2020/9/10 0010
- * @Version 1.0
- * @Description:
+ Author: Z.K
+ FileName: ErrorEnums
+ DateTime: 2020/9/10 0010
+ Version 1.0
+ Description:
  */
 public enum ErrorEnums implements ExceptionAssert{
 
